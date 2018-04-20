@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     EditText searchWordEditText;
 
     HashMap<String,String> hashMap;
-    TreeSet wordSet;
+    TreeSet<String> wordSet;
     SharedPreferences pref;
     SharedPreferences.Editor editor;
 
@@ -51,10 +51,9 @@ public class MainActivity extends AppCompatActivity {
         wordSet.add("technology");
         wordSet.add("develop");
 
-        for(String  word: wordSet){
+        for(String word: wordSet){
 
-            this.hashM
-            ap.put(word,pref.getString(word,null));
+            this.hashMap.put(word,pref.getString(word,null));
 
             adapter.add("["+word+"]" + pref.getString(word,null));
 
